@@ -1,16 +1,11 @@
-# IDS Akademik By Derry Ikhsan Sholahuddin
+# PROJECT BUAH
 
-Menerima jasa pembuatan aplikasi web bisa kontak melalui 
-# whatsapp : 0852-9488-2253
-messanger : https://www.facebook.com/derryikhsan.sholahuddin1
-
-Untuk donatur dapat transfer melalui BCA :
-* No. Rek : 1760032251
-* A.n : Derry Ikhsan Sholahuddin
-
-Terima kasih atas dukungan anda yang telah berpartisipasi menjadi donatur.
-
-By Derry Ikhsan Sholahuddin
+Login ADMIN
 
 Username	= admin
 Password	= admin 
+
+Login ADMIN GUDANG
+
+Username = gudang
+Password = admin
