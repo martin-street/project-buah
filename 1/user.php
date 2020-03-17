@@ -9,7 +9,7 @@ include "auth_user.php";
 <html>
  <head>
     <meta charset="utf-8">
-    <title>SINAR</title>
+    <title>BUAH</title>
 	<!-- Library CSS -->
 	<?php
 		include "bundle_css.php";
@@ -32,14 +32,11 @@ include "auth_user.php";
           </div><!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
 			<li class="header"><h4><b><center>Menu Panel</center></b></h4></li>
-              <li ><a href="index.php"><i class="fa fa-home"></i><span>Dashboard</span></a></li>
-			        <li><a href="murid.php"><i class="fa fa-user"></i><span>Murid</span></a></li>
-					<li class="active"><a href="user.php"><i class="fa fa-user-circle-o"></i><span>Pengguna</span></a></li>
-					<li><a href="walikelas.php"><i class="fa fa-cube"></i><span>Wali Kelas</span></a></li>
-					<li><a href="guru.php"><i class="fa fa-graduation-cap"></i><span>Guru</span></a></li>
-					<li><a href="mapel.php"><i class="fa fa-asterisk"></i><span>Mata Pelajaran</span></a></li>
-					<li><a href="nilaiharian.php"><i class="fa fa-list-ul"></i><span>Nilai Harian</span></a></li>
-					<li><a href="nilaiujian.php"><i class="fa fa-list-ol"></i><span>Nilai Ujian</span></a></li>
+              <li><a href="index.php"><i class="fa fa-home"></i><span>Dashboard</span></a></li>
+			        <li class="active"><a href="user.php"><i class="fa fa-user"></i><span>Pengguna</span></a></li>
+					<li><a href="pengirimangudang.php"><i class="fa fa-user-circle-o"></i><span>Pengiriman Antar Gudang</span></a></li>
+					<li><a href="pengirimantoko.php"><i class="fa fa-cube"></i><span>Pengiriman Ke Toko</span></a></li>
+					<li><a href="keuangan.php"><i class="fa fa-graduation-cap"></i><span>Transaksi Keuangan</span></a></li>
 			</ul>
         </section>
         <!-- /.sidebar -->
@@ -90,24 +87,7 @@ include "auth_user.php";
 					</div>
 					<div class="modal-body">
 						<form action="user_add.php" name="modal_popup" enctype="multipart/form-data" method="post">
-							<div class="form-group">
-								<label>ID</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-id-card"></i>
-										</div>
-										<input name="id" type="text" class="form-control" placeholder="ID Pengguna"/>
-									</div>
-							</div>
-							<div class="form-group">
-								<label>NIP</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-id-card"></i>
-										</div>
-										<input name="nip" type="text" class="form-control" placeholder="Nomor Induk Pegawai"/>
-									</div>
-							</div>
+							
 							<div class="form-group">
 								<label>Nama</label>
 									<div class="input-group">
@@ -136,16 +116,15 @@ include "auth_user.php";
 									</div>
 							</div>
 							<div class="form-group">
-								<label>Hak Akses</label>
+								<label>Jabatan</label>
 									<div class="input-group">
 										<div class="input-group-addon">
 											<i class="fa fa-arrow-circle-o-right"></i>
 										</div>
-										<select name="akses" class="form-control">
-											<option selected>Pilih Hak Akses Pengguna</option>
-											<option value="1">Administrator</option>
-											<option value="2">Wali Kelas</option>
-											<option value="2">Guru</option>
+										<select name="jabatan" class="form-control">
+											<option selected>Pilih Jabatan</option>
+											<option value="1">Admin</option>
+											<option value="2">Admin Gudang</option>
 										</select>
 									</div>
 							</div>

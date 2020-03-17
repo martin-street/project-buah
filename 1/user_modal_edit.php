@@ -4,7 +4,7 @@ include "../koneksi.php";
 
 $id	= $_GET["id"];
 
-$queryuser = mysqli_query($konek, "SELECT * FROM pengguna WHERE id_pengguna='$id'");
+$queryuser = mysqli_query($konek, "SELECT * FROM admin WHERE id_admin='$id'");
 if($queryuser == false){
 	die ("Terjadi Kesalahan : ". mysqli_error($konek));
 }
@@ -25,23 +25,15 @@ while($user = mysqli_fetch_array($queryuser)){
 					</div>
 					<div class="modal-body">
 						<form action="user_edit.php" name="modal_popup" enctype="multipart/form-data" method="post">
-						<input name="id" type="hidden" class="form-control" value="<?php echo $user["id_pengguna"]; ?>"/>
-							<div class="form-group">
-								<label>NIP</label>
-									<div class="input-group">
-										<div class="input-group-addon">
-											<i class="fa fa-id-card"></i>
-										</div>
-										<input name="nip" type="text" class="form-control" value="<?php echo $user["nip"]; ?>" />
-									</div>
-							</div>
+						<input name="id" type="hidden" class="form-control" value="<?php echo $user["id_admin"]; ?>"/>
+						
 							<div class="form-group">
 								<label>Nama</label>
 									<div class="input-group">
 										<div class="input-group-addon">
 											<i class="fa fa-user"></i>
 										</div>
-										<input name="nama" type="text" class="form-control" value="<?php echo $user["nama_pengguna"]; ?>" />
+										<input name="nama" type="text" class="form-control" value="<?php echo $user["nama"]; ?>" />
 									</div>
 							</div>
 							<div class="form-group">
@@ -59,36 +51,32 @@ while($user = mysqli_fetch_array($queryuser)){
 										<div class="input-group-addon">
 											<i class="fa fa-unlock"></i>
 										</div>
-										<input name="password" type="text" class="form-control" placeholder="*****"/>
+										<input name="password" type="text" class="form-control" placeholder="********"/>
 									</div>
 							</div>
 							<div class="form-group">
-								<label>Hak Akses</label>
+								<label>Jabatan</label>
 									<div class="input-group">
 										<div class="input-group-addon">
 											<i class="fa fa-arrow-circle-o-right"></i>
 										</div>
-										<select name="akses" class="form-control">
-											<option value="<?php echo $user["Id_User_Akses"]; ?>" selected>
+										<select name="jabatan" class="form-control">
+											<option value="<?php echo $user["id_jabatan"]; ?>" selected>
 											<?php
-												if ($user["Id_User_Akses"]=="1"){
-													echo "Administrator";
+												if ($user["id_jabatan"]=="1"){
+													echo "Admin";
 												}
-												else if($user["Id_User_Akses"]=="2"){
-													echo "Wali Kelas";
-												} else {
-													echo "Guru";
+												else if($user["id_jabatan"]=="2"){
+													echo "Admin Gudang";
 												}
 											?>
 											</option>
 											<?php
-												if ($user["Id_User_Akses"]=="1"){
-													echo "<option value='1'>Administrator</option>";
+												if ($user["id_jabatan"]=="1"){
+													echo "<option value='1'>Admin</option>";
 												}
-												else if($user["Id_User_Akses"]=="2"){
-													echo "<option value='2'>Wali Kelas</option>";
-												} else {
-													echo "<option value='4'>Guru</option>";
+												else if($user["id_jabatan"]=="2"){
+													echo "<option value='2'>Admin Gudang</option>";
 												}
 											?>
 										</select>

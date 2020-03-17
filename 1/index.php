@@ -44,7 +44,6 @@ include "auth_user.php";
               <li class="header"><h4><b><center>Menu Panel</center></b></h4></li>
               <li class="active"><a href="index.php"><i class="fa fa-home"></i><span>Dashboard</span></a></li>
 			        <li><a href="user.php"><i class="fa fa-user"></i><span>Pengguna</span></a></li>
-					<li><a href="jabatan.php"><i class="fa fa-user"></i><span>Jabatan</span></a></li>
 					<li><a href="pengirimangudang.php"><i class="fa fa-user-circle-o"></i><span>Pengiriman Antar Gudang</span></a></li>
 					<li><a href="pengirimantoko.php"><i class="fa fa-cube"></i><span>Pengiriman Ke Toko</span></a></li>
 					<li><a href="keuangan.php"><i class="fa fa-graduation-cap"></i><span>Transaksi Keuangan</span></a></li>

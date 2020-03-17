@@ -19,7 +19,7 @@ if(isset ($_GET ["Err"]) && !empty ($_GET ["Err"])){
 			$Err = "Password salah";
 		break;
 		case 5:
-			$Err = "Username atau Password salah";
+			$Err = "Username salah";
 		break;
 		case 6:
 			$Err = "Maaf, Terjadi Kesalahan";

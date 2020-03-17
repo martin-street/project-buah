@@ -7,15 +7,18 @@ $nama				= addslashes($_POST["nama"]);
 $username			= $_POST["username"];
 $password			= $_POST["password"];
 $Password_Hash		= password_hash($password, PASSWORD_DEFAULT);
-$hakakses			= $_POST["akses"];
+$jabatan			= $_POST["jabatan"];
 
-if($edit = mysqli_query($konek, "UPDATE pengguna SET nama_pengguna='$nama',
-username='$username',
-password='$Password_Hash',
-Id_User_Akses='$hakakses' WHERE id_pengguna='$id'")){
-		header("Location: user.php");
-		exit();
+if (empty($password)){
+	$edit = mysqli_query($konek, "UPDATE admin SET nama='$nama',
+	username='$username', id_jabatan='$jabatan' WHERE id_admin='$id'");
+} else {
+	$edit = mysqli_query($konek, "UPDATE admin SET nama='$nama',
+	username='$username', password='$Password_Hash', id_jabatan='$jabatan' WHERE id_admin='$id'");
 	}
+	header("Location: user.php");
+	exit();
+	
 die("Terdapat Kesalahan : ".mysqli_error($konek));
 
 ?>

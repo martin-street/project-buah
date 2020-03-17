@@ -51,10 +51,6 @@ if ($_POST){
 		header ("Location: index.php?Err=1");
 		exit();
 	}
-	else if(empty ($Username)){
-		header ("Location: index.php?Err=2");
-		exit();
-	}
 	else if(empty ($Password)){
 		header ("Location: index.php?Err=3");
 		exit();

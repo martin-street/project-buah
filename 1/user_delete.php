@@ -4,7 +4,7 @@ include "../koneksi.php";
 
 $Id_User	= $_GET["id"];
 
-if($delete = mysqli_query($konek, "DELETE FROM pengguna WHERE id_pengguna='$Id_User'")){
+if($delete = mysqli_query($konek, "DELETE FROM admin WHERE id_admin='$Id_User'")){
 	header("Location: user.php");
 	exit();
 }
